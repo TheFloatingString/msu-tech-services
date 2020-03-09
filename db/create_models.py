@@ -10,13 +10,13 @@ import uuid
 import random
 import datetime
 import os
-
-from src import read_credentials
+# 
+# from src import read_credentials
 
 # get credentials
-keys = read_credentials.return_keys()
+# keys = read_credentials.return_keys()
 
-engine = create_engine(keys["DATABASE_URL"])
+engine = create_engine(os.environ["DATABASE_URL"])
 
 meta = MetaData()
 Base = declarative_base()
